@@ -1,11 +1,15 @@
 import unittest
 import app
 
-class TestParser(unittest.TestCase):
-    def test_plain_questions(self):
-        out = app.parse_questions("¿P?\n- Sí\n- No", "Prueba")
-        self.assertEqual(out["questions"][0]["options"][1]["label"], "No")
-    def test_two_options_required(self):
-        with self.assertRaises(ValueError): app.parse_questions("¿P?\n- Sí", "Prueba")
 
-if __name__ == "__main__": unittest.main()
+class FormTests(unittest.TestCase):
+    def test_supports_single_and_multi_choice(self):
+        data = app.form({"title": "Prueba", "questions": [
+            {"prompt": "Una", "type": "single_choice", "options": ["A", "B"]},
+            {"prompt": "Varias", "type": "multi_choice", "options": ["A", "B"]},
+        ]})
+        self.assertEqual([item["type"] for item in data["questions"]], ["single_choice", "multi_choice"])
+
+
+if __name__ == "__main__":
+    unittest.main()

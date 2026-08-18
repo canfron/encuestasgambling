@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey title="Encuesta de ejemplo">
+  <question type="single_choice">
+    <prompt>¿Qué valor tendría para ti una herramienta de análisis de cuotas?</prompt>
+    <options><option>Ninguno</option><option>Bajo</option><option>Moderado</option><option>Alto</option></options>
+  </question>
+  <question type="multi_choice">
+    <prompt>¿Qué información consultarías?</prompt>
+    <options><option>Histórico de cuotas</option><option>Probabilidad implícita</option><option>Margen de la casa</option></options>
+  </question>
+</survey>

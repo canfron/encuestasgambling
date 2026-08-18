@@ -1,0 +1,15 @@
+{
+  "title": "Encuesta de ejemplo",
+  "questions": [
+    {
+      "prompt": "¿Qué valor tendría para ti una herramienta de análisis de cuotas?",
+      "type": "single_choice",
+      "options": ["Ninguno", "Bajo", "Moderado", "Alto"]
+    },
+    {
+      "prompt": "¿Qué información consultarías?",
+      "type": "multi_choice",
+      "options": ["Histórico de cuotas", "Probabilidad implícita", "Margen de la casa"]
+    }
+  ]
+}
